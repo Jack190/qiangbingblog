@@ -1,0 +1,290 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:v="urn:schemas-microsoft-com:vml"
+	xmlns:o="urn:schemas-microsoft-com:office:office">
+
+<head>
+<link href="/views/css/skin.css" rel="stylesheet" type="text/css" />
+<meta http-equiv="Content-Language" content="zh-cn" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>qiangbingblog</title>
+<style type="text/css">
+
+<!--
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	background-color: #EEF2FB;
+	background-image: url(news-title-bg.gif);
+	background-repeat: repeat-x;
+}
+
+td{
+	CURSOR: hand;
+	COLOR: #000000;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	line-height: 25px;
+	border: 1px solid #B5D0D9;
+	background-repeat: repeat-x;
+}
+
+.STYLE1 {color: #FF0000}
+</style>
+</head>
+
+<body>
+
+<table border="0" align="center" >
+	<div>
+		<a href="login.html">登录</a>|<a href="register.html">注册</a>	</div>
+	<tr>
+		<td width="214" height="95"><img
+			src="/views/pictures/UiCan!_Logo.gif" width="200" height="100" /></td>
+		<td width="840"><img
+			src="/views/pictures/blog.jpg" width="728" height="90" border="0" />&nbsp;</td>
+	</tr>
+	<tr>
+		<td colspan="2" height="25" bgcolor="#008080" class="dh">
+		<strong>　　　 <a href="/index.html">首页</a>　　|　　<a href="#">论坛</a>　　|　　<a href="#">问答</a>　　 
+								|　　 <a href="#">专栏</a>　　　|　　<a href="#">精华</a>　　|　  　<a href="#">资讯</a>　　  |　　 <a href="#">搜索</a>　　 
+								|　　<a href="#">关于</a>　　　</strong></td>
+	</tr>
+	<tr>
+		<td colspan="2" valign="top">
+		<table width="96%" height="336" style="width: 100%">
+			<tr>
+				<td><div id="wrap">
+                  <div class="register">
+                    <h1 class="tit_2"><img src="/views/pictures/tit_reg.gif" alt="个人用户注册" width="35" height="40" title="个人用户注册" />个人用户注册</h1>
+                    <!-- register info -->
+                    <div class="reg_info">
+                      <ul class="reg_step">
+                        <li class="select"><span class="step_1">填写注册信息</span></li>
+                        <li><span class="step_2">通过邮件确认</span></li>
+                        <li><span class="step_3">注册成功</span></li>
+                      </ul>
+                      <div class="reg_info_con">
+                        <form action="http://www.iteye.com/users" id="signup_form" method="post">
+                          <div style="margin:0;padding:0;display:inline"></div>
+                          <table border="0" cellspacing="0" cellpadding="0" class="table_2">
+                            <colgroup>
+                              <col width="85" />
+                              <col />
+                            </colgroup>
+                            <tbody>
+                              <tr>
+                                <th valign="top"><span class="must STYLE1">*</span>用户名:</th>
+                                <td><input class="input_1 required min-length-3 validate-ajax-/users/validate_user_name" id="user_name" maxlength="20" name="user[name]" placeholder="全站唯一" size="30" type="text" />
+                                    <p>3-20个字符，允许中文，英文字母、数字和符号.-_。为了避免被垃圾邮件抓取，请勿使用邮件地址作为用户名</p></td>
+                              </tr>
+                              <tr>
+                                <th valign="top"><span class="must STYLE1">*</span>邮件地址:</th>
+                                <td><input class="input_1 required validate-email validate-ajax-/users/validate_email" id="user_email" name="user[email]" size="30" type="text" />
+                                    <ul>
+                                      <li>请不要使用Yahoo邮箱注册，Yahoo邮件服务器会拒绝ITeye发送的邮件</li>
+                                      <li>如果您没有收到ITeye发送的邮件，请注意查看您邮箱中的垃圾邮件。</li>
+                                      <li>并且把来自ITeye的邮件设置成不是垃圾邮件，方便接受站内邮件。</li>
+                                    </ul></td>
+                              </tr>
+                              <tr>
+                                <th valign="top"><span class="must STYLE1">*</span>密码:</th>
+                                <td><input class="required min-length-6 max-length-20 validate-ajax-/users/validate_password input_1" id="user_password" name="user[password]" placeholder="6-20个字符" size="30" type="password" />
+                                    <p>请选用安全的密码，不允许使用只包含纯数字，纯大写或者小写字母的密码</p></td>
+                              </tr>
+                              <tr>
+                                <th><span class="must STYLE1">*</span>确认密码:</th>
+                                <td><input class="required equals-user_password input_1" id="user_password_confirmation" name="user[password_confirmation]" size="30" type="password" /></td>
+                              </tr>
+                              <tr>
+                                <td colspan="2" class="line">&nbsp;</td>
+                              </tr>
+                              <tr>
+                                <th>来自:</th>
+                                <td class="from"><div class="from">
+                                    <input class="comboText" id="user_fromto" name="user[fromto]" placeholder="填写或选择" size="30" type="text" />
+                                    <select class="select_1 combobox" id="user_fromto" name="user[fromto]">
+                                      <option value=""></option>
+                                      <option value="北京">北京</option>
+                                      <option value="上海">上海</option>
+                                      <option value="广州">广州</option>
+                                      <option value="深圳">深圳</option>
+                                      <option value="杭州">杭州</option>
+                                      <option value="南京">南京</option>
+                                      <option value="成都">成都</option>
+                                      <option value="武汉">武汉</option>
+                                      <option value="西安">西安</option>
+                                      <option value="大连">大连</option>
+                                      <option value="青岛">青岛</option>
+                                      <option value="济南">济南</option>
+                                      <option value="天津">天津</option>
+                                      <option value="沈阳">沈阳</option>
+                                      <option value="苏州">苏州</option>
+                                      <option value="厦门">厦门</option>
+                                      <option value="珠海">珠海</option>
+                                    </select>
+                                    <span>如果列表中没有您的城市，可直接输入</span> </div></td>
+                              </tr>
+                              <tr>
+                                <th>性别:</th>
+                                <td><select class="select_2" id="user_gender" name="user[gender]">
+                                  <option value=""></option>
+                                    <option value="1">男</option>
+                                    <option value="2">女</option>
+                                </select>
+                                </td>
+                              </tr>
+                              <tr>
+                                <th>职业:</th>
+                                <td><select class="select_1" id="user_occ" name="user[occ]">
+                                  <option value=""></option>
+                                    <option value="CEO/总裁">CEO/总裁</option>
+                                    <option value="CTO/CIO/技术总监">CTO/CIO/技术总监</option>
+                                    <option value="部门经理/部门主管">部门经理/部门主管</option>
+                                    <option value="项目经理/项目主管">项目经理/项目主管</option>
+                                    <option value="高级软件架构师">高级软件架构师</option>
+                                    <option value="高级软件工程师">高级软件工程师</option>
+                                    <option value="需求分析师">需求分析师</option>
+                                    <option value="咨询师">咨询师</option>
+                                    <option value="售前工程师">售前工程师</option>
+                                    <option value="软件实施顾问">软件实施顾问</option>
+                                    <option value="软件工程师">软件工程师</option>
+                                    <option value="软件测试">软件测试</option>
+                                    <option value="技术支持/维护工程师">技术支持/维护工程师</option>
+                                    <option value="系统工程师SA">系统工程师SA</option>
+                                    <option value="数据库DBA">数据库DBA</option>
+                                    <option value="其他">其他</option>
+                                </select>
+                                </td>
+                              </tr>
+                              <tr>
+                                <th>行业:</th>
+                                <td><select class="select_1" id="user_industry" name="user[industry]">
+                                  <option value=""></option>
+                                    <option value="金融">金融</option>
+                                    <option value="电信">电信</option>
+                                    <option value="互联网">互联网</option>
+                                    <option value="物流">物流</option>
+                                    <option value="电子政务">电子政务</option>
+                                    <option value="旅游">旅游</option>
+                                    <option value="制造">制造</option>
+                                    <option value="教育">教育</option>
+                                    <option value="医疗">医疗</option>
+                                    <option value="交通">交通</option>
+                                    <option value="移动和手机应用">移动和手机应用</option>
+                                    <option value="嵌入式">嵌入式</option>
+                                    <option value="网络游戏">网络游戏</option>
+                                    <option value="咨询">咨询</option>
+                                    <option value="餐饮零售">餐饮零售</option>
+                                    <option value="欧美外包">欧美外包</option>
+                                    <option value="日本外包">日本外包</option>
+                                    <option value="原厂商">原厂商</option>
+                                    <option value="SOHO">SOHO</option>
+                                    <option value="其他">其他</option>
+                                </select>
+                                </td>
+                              </tr>
+                              <tr>
+                                <th>工作年限:</th>
+                                <td><select class="select_1" id="user_workyear" name="user[workyear]">
+                                  <option value=""></option>
+                                    <option value="在读学生">在读学生</option>
+                                    <option value="应届毕业生">应届毕业生</option>
+                                    <option value="一年以上">一年以上</option>
+                                    <option value="两年以上">两年以上</option>
+                                    <option value="三年以上">三年以上</option>
+                                    <option value="五年以上">五年以上</option>
+                                    <option value="八年以上">八年以上</option>
+                                    <option value="十年以上">十年以上</option>
+                                    <option value="十五年以上">十五年以上</option>
+                                    <option value="二十年以上">二十年以上</option>
+                                </select>
+                                </td>
+                              </tr>
+                              <tr>
+                                <th><span class="must">*</span>验证码:</th>
+                                <td><input class="input_3 required" id="user_captcha" name="user[captcha]" size="30" type="text" value="" />
+                                    <span><img src="/views/pictures/simple_captcha" alt="Simple_captcha?distortion=high&amp;image_style=simply_blue&amp;simple_captcha_key=2043f37b73861946c65702e2bc83e125e25ee404&amp;time=1357551241" width="110" height="38" /></span> </td>
+                              </tr>
+                              <tr>
+                                <th>&nbsp;</th>
+                                <td><input name="checkbox" type="checkbox" id="auto" checked="checked" />
+                                    <label for="auto">我已经阅读并同意</label>
+                                  <a href="http://www.iteye.com/topic/29434" target="_blank">注册条款</a></td>
+                              </tr>
+                            </tbody>
+                          </table>
+                          <div class="btn_area_1">
+                            <input type="submit" name="button" id="button" value="注　册" class="btn_1" />
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                    <!-- company register -->
+                    <div class="company_reg">
+                      <form>
+                        <div class="btn_area_2"></div>
+                      </form>
+                    </div>
+                  </div>
+			    </div></td>
+				<td width="259">
+	<div class="company_reg">
+      <form>
+        <div class="btn_area_2"><a href="http://hire.pongo.cn/organ/register" class="btn_3">企业用户注册</a></div>
+        <dl>
+          <dt>如果您是公司用户想发布招聘信息，请注册企业会员</dt>
+          <dd>欢迎注册iteye的会员。注册成为会员，注册成功，帐号即时开通，马上能够读站内短信，能够修改个人资料和密码，邀请朋友和推荐文章。</dd>
+          <dd>注册满一天以后，您将拥有全部权限，包括在论坛发技术帖和招聘帖，对别人的帖子进行评分，下载附件，写博客，发站内短信，申请专栏和发起群组等。</dd>
+          <dd>如果您是第一次使用ITeye，请仔细阅读<a href="http://www.iteye.com/index/help" target="_blank">ITeye帮助</a></dd>
+          <dd class="last">有任何问题，可以webmaster<img src="/views/pictures/email.gif" alt="Email" width="12" height="12">iteye.com， ITeye和您一同成长。</dd>
+        </dl>
+      </form>
+    </div>
+				</td>
+			</tr>
+		</table>
+		<div><br />
+		<div id="site_nav"
+			style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; z-index: 1; color: rgb(0, 0, 0); font-family: Helvetica, Tahoma, Arial, sans-serif; font-size: 12px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 18px; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px;">
+		<ul
+			style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; width: 950px; line-height: 1em; list-style-type: none; list-style-position: initial; list-style-image: initial;">
+			<li
+				style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 3px; padding-right: 10px; padding-bottom: 3px; padding-left: 10px; display: inline; list-style-type: none; list-style-position: initial; list-style-image: initial; line-height: 1em; border-right-width: 1px; border-right-style: solid; border-right-color: rgb(170, 170, 170);"><a
+				style="color: rgb(0, 102, 153); text-decoration: none;"
+				href="http://www.qiangbing.net/index/service">广告服务</a><span
+				class="Apple-converted-space">&nbsp;</span></li>
+			<li
+				style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 3px; padding-right: 10px; padding-bottom: 3px; padding-left: 10px; display: inline; list-style-type: none; list-style-position: initial; list-style-image: initial; line-height: 1em; border-right-width: 1px; border-right-style: solid; border-right-color: rgb(170, 170, 170);"><a
+				style="color: rgb(0, 102, 153); text-decoration: none;"
+				href="http://webmaster.qiangbing.net/">Qiangbing黑板报</a><span
+				class="Apple-converted-space">&nbsp;</span></li>
+			<li
+				style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 3px; padding-right: 10px; padding-bottom: 3px; padding-left: 10px; display: inline; list-style-type: none; list-style-position: initial; list-style-image: initial; line-height: 1em; border-right-width: 1px; border-right-style: solid; border-right-color: rgb(170, 170, 170);"><a
+				style="color: rgb(0, 102, 153); text-decoration: none;"
+				href="/contact/">联系我们</a><span
+				class="Apple-converted-space">&nbsp;</span></li>
+			<li class="last"
+				style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 3px; padding-right: 10px; padding-bottom: 3px; padding-left: 10px; display: inline; list-style-type: none; list-style-position: initial; list-style-image: initial; line-height: 1em; border-right-width: initial; border-right-style: none; border-right-color: initial;"><a
+				style="color: rgb(0, 102, 153); text-decoration: none;"
+				href="http://www.qiangbing.net/index/friend_links">友情链接</a></li>
+		</ul>
+		</div>
+		<div id="copyright"
+			style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 10px; padding-right: 10px; padding-bottom: 10px; padding-left: 10px; color: rgb(0, 0, 0); font-family: Helvetica, Tahoma, Arial, sans-serif; font-size: 12px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 18px; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px;">
+		© 2003-2012 QiangBing.net. [<span class="Apple-converted-space">&nbsp;</span><a
+			style="color: rgb(0, 102, 153); text-decoration: none;"
+			href="http://www.miibeian.gov.cn/">京ICP证110151号</a><span
+			class="Apple-converted-space">&nbsp;</span>京公网安备110105010620 ]<br />
+		QiangBing.net 版权所有</div>
+		<br />
+		<br />
+		</div>		</td>
+	</tr>
+</table>
+
+</body>
+
+</html>

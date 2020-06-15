@@ -1,0 +1,313 @@
+﻿<link href="/views/admin/images/skin.css" rel="stylesheet" type="text/css" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><style type="text/css">
+<head>
+<style>
+
+<!--
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	background-color: #EEF2FB;
+}
+
+td{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	line-height: 26px;
+	color: #333333;
+
+	text-decoration: none;
+	padding-left: 0px;
+	}
+	
+.STYLE1 {color: #FF0000}
+-->
+</style>
+<!-- ------------------------editor-Code----------------------------- -->
+<script charset="utf-8" src="/views/admin/editor/kindeditor.js"></script>
+<script charset="utf-8" src="/views/admin/editor/lang/zh_CN.js"></script>
+<script type="text/javascript">
+
+	var editor;
+	KindEditor.ready(function(K) {
+        editor = K.create('#editor_id');
+	});
+
+	var options = {
+        cssPath : 'editor/css/index.css',
+        filterMode : true
+	};
+	var editor = K.create('textarea[name="content"]', options);
+
+</script>
+
+<!-- ======================Calender-Code===================== -->
+<script type="text/javascript" src="/views/admin/JSCal/src/js/jscal2.js"></script>
+<script type="text/javascript" src="/views/admin/JSCal/src/js/lang/cn.js"></script>
+
+<link rel="stylesheet" type="text/css" href="/views/admin/JSCal/src/css/jscal2.css" />
+<link rel="stylesheet" type="text/css" href="/views/admin/JSCal/src/css/border-radius.css" />
+<link rel="stylesheet" type="text/css" href="/views/admin/JSCal/src/css/gold/gold.css" />
+
+</head>
+<body>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="17" valign="top" background="/views/admin/images/mail_leftbg.gif"><img src="/views/admin/images/left-top-right.gif" width="17" height="29" /></td>
+    <td valign="top" background="/views/admin/images/content-bg.gif"><table width="100%" height="31" border="0" cellpadding="0" cellspacing="0" class="left_topbg" id="table2">
+      <tr>
+        <td height="31"><div class="titlebt">欢迎界面</div></td>
+      </tr>
+    </table></td>
+    <td width="16" valign="top" background="/views/admin/images/mail_rightbg.gif"><img src="/views/admin/images/nav-right-bg.gif" width="16" height="29" /></td>
+  </tr>
+  <tr>
+    <td valign="middle" background="/views/admin/images/mail_leftbg.gif">&nbsp;</td>
+    <td valign="top" bgcolor="#F7F8F9"><table width="98%" border="0" align="center" cellpadding="0" cellspacing="0">
+      <tr>
+        <td colspan="2" valign="top">&nbsp;</td>
+        <td width="7%">&nbsp;</td>
+        <td width="40%" valign="top">&nbsp;</td>
+      </tr>
+      <tr>
+        <td colspan="4" valign="top"><span class="left_bt">添加资讯</span></td>
+        </tr>
+      
+      <tr>
+        <td height="20" colspan="4"><table width="100%" height="1" border="0" cellpadding="0" cellspacing="0" bgcolor="#CCCCCC">
+          <tr>
+            <td></td>
+          </tr>
+        </table></td>
+      </tr>
+	  <form action="" method="POST" enctype="multipart/form-data">{% csrf_token %}
+      <tr>
+        <td height="20" colspan="4">
+            <label>标题：
+              <input name="title" id="title" type="text" value="{{info.title}}" size="40" maxlength="100">
+            </label>
+            <span class="STYLE1">*</span> 标题不能为空</td>
+      </tr>
+      <tr>
+        <td height="25" colspan="4">
+          <label>来源：
+            <input name="source" type="text" value="{{info.source}}" size="40" maxlength="100">
+            </label>
+          <span class="STYLE1">*</span> 来源不能为空</td>
+      </tr>
+      <tr>
+        <td height="20" colspan="4">
+          <label>时间：
+            <input name="calendar" id="calendar-inputField" type="text" value="{{info.time}}" size="40" maxlength="100">
+            </label>
+          <span class="STYLE1">* </span>请选择时间</td>
+      </tr>
+      <tr>
+        <td height="20" colspan="4">
+        <label>作者：
+            <input name="author" id="author" type="text" value="{{info.author}}" size="40" maxlength="100">
+            <span class="STYLE1">*</span> 作者必须填</label></td>
+      </tr>
+      <tr>
+        <td height="40" colspan="4">
+        <label>内容：
+            <textarea id="editor_id" name="content" value="{{info.content}}" style="width:700px;height:300px;">&lt;strong&gt;HTML内容&lt;/strong&gt;</textarea>
+        </label></td>
+      </tr>
+      <tr>
+        <td height="40" colspan="4"><label>
+          <input type="submit" value="保存" name="B1">
+          <input type="reset" value="重置" name="B2">
+        </label></td>
+      </tr>
+	  </form>
+      <tr>
+        <td width="2%">&nbsp;</td>
+        <td width="51%" class="left_txt"><img src="/views/admin/images/icon-mail2.gif" width="16" height="11"> 客户服务邮箱：1725440647@qq.com<br>
+              <img src="/views/admin/images/icon-phone.gif" width="17" height="14"> 官方网站：http://www.17tian.com</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+    </table></td>
+    <td background="/views/admin/images/mail_rightbg.gif">&nbsp;</td>
+  </tr>
+  <tr>
+    <td valign="bottom" background="/views/admin/images/mail_leftbg.gif"><img src="/views/admin/images/buttom_left2.gif" width="17" height="17" /></td>
+    <td background="/views/admin/images/buttom_bgs.gif"><img src="/views/admin/images/buttom_bgs.gif" width="17" height="17"></td>
+    <td valign="bottom" background="/views/admin/images/mail_rightbg.gif"><img src="/views/admin/images/buttom_right2.gif" width="16" height="17" /></td>
+  </tr>
+</table>
+<!-- Calendar-code -->
+ <script type="text/javascript">
+        Calendar.setup({
+            inputField: "calendar-inputField",
+            trigger: "calendar-inputField",
+            weekNumbers: true,
+            showTime: true,
+            minuteStep: 1,
+            min: 20010101,
+            max: 20201231,
+            onChange: function() {
+                this.setHours(new Date().getHours());
+                this.setMinutes(new Date().getMinutes());
+            },
+            onSelect: function() {this.hide();}
+        });
+</script>
+ 
+<!-- ------------鼠标时钟特效------------- -->
+<SCRIPT language=JavaScript> 
+dCol='0099ff';//date colour. 
+fCol='cc66ff';//face colour. 
+sCol='ff0000';//seconds colour. 
+mCol='0099ff';//minutes colour. 
+hCol='0099ff';//hours colour. 
+ClockHeight=40; 
+ClockWidth=40; 
+ClockFromMouseY=0; 
+ClockFromMouseX=150; 
+//Alter nothing below! Alignments will be lost! 
+d=new Array("SUNDAY","MONDAY","TUESDAY","WEDNESDAY","THURSDAY","FRIDAY","SATURDAY"); 
+m=new Array("JANUARY","FEBRUARY","MARCH","APRIL","MAY","JUNE","JULY","AUGUST","SEPTEMBER","OCTOBER","NOVEMBER","DECEMBER"); 
+date=new Date(); 
+day=date.getDate(); 
+year=date.getYear(); 
+if (year < 2000) year=year+1900; 
+TodaysDate=" "+d[date.getDay()]+" "+day+" "+m[date.getMonth()]+" "+year; 
+D=TodaysDate.split(''); 
+H='...'; 
+H=H.split(''); 
+M='....'; 
+M=M.split(''); 
+S='.....'; 
+S=S.split(''); 
+Face='1 2 3 4 5 6 7 8 9 10 11 12'; 
+font='tahoma'; 
+size=1; 
+speed=0.6; 
+ns=(document.layers); 
+ie=(document.all); 
+Face=Face.split(' '); 
+n=Face.length; 
+a=size*10; 
+ymouse=0; 
+xmouse=0; 
+scrll=0; 
+props="<font face="+font+" size="+size+" color="+fCol+">"; 
+props2="<font face="+font+" size="+size+" color="+dCol+">"; 
+Split=360/n; 
+Dsplit=360/D.length; 
+HandHeight=ClockHeight/4.5 
+HandWidth=ClockWidth/4.5 
+HandY=-7; 
+HandX=-2.5; 
+scrll=0; 
+step=0.06; 
+currStep=0; 
+y=new Array();x=new Array();Y=new Array();X=new Array(); 
+for (i=0; i < n; i++){y[i]=0;x[i]=0;Y[i]=0;X[i]=0} 
+Dy=new Array();Dx=new Array();DY=new Array();DX=new Array(); 
+for (i=0; i < D.length; i++){Dy[i]=0;Dx[i]=0;DY[i]=0;DX[i]=0} 
+if (ns){ 
+for (i=0; i < D.length; i++) 
+document.write('<layer name="nsDate'+i+'" top=0 left=0 height='+a+' width='+a+'><center>'+props2+D[i]+'</font></center></layer>'); 
+for (i=0; i < n; i++) 
+document.write('<layer name="nsFace'+i+'" top=0 left=0 height='+a+' width='+a+'><center>'+props+Face[i]+'</font></center></layer>'); 
+for (i=0; i < S.length; i++) 
+document.write('<layer name=nsSeconds'+i+' top=0 left=0 width=15 height=15><font face=Arial size=3 color='+sCol+'><center>'+S[i]+'</center></font></layer>'); 
+for (i=0; i < M.length; i++) 
+document.write('<layer name=nsMinutes'+i+' top=0 left=0 width=15 height=15><font face=Arial size=3 color='+mCol+'><center>'+M[i]+'</center></font></layer>'); 
+for (i=0; i < H.length; i++) 
+document.write('<layer name=nsHours'+i+' top=0 left=0 width=15 height=15><font face=Arial size=3 color='+hCol+'><center>'+H[i]+'</center></font></layer>'); 
+} 
+if (ie){ 
+document.write('<div id="Od" style="position:absolute;top:0px;left:0px"><div style="position:relative">'); 
+for (i=0; i < D.length; i++) 
+document.write('<div id="ieDate" style="position:absolute;top:0px;left:0;height:'+a+';width:'+a+';text-align:center">'+props2+D[i]+'</font></div>'); 
+document.write('</div></div>'); 
+document.write('<div id="Of" style="position:absolute;top:0px;left:0px"><div style="position:relative">'); 
+for (i=0; i < n; i++) 
+document.write('<div id="ieFace" style="position:absolute;top:0px;left:0;height:'+a+';width:'+a+';text-align:center">'+props+Face[i]+'</font></div>'); 
+document.write('</div></div>'); 
+document.write('<div id="Oh" style="position:absolute;top:0px;left:0px"><div style="position:relative">'); 
+for (i=0; i < H.length; i++) 
+document.write('<div id="ieHours" style="position:absolute;width:16px;height:16px;font-family:Arial;font-size:16px;color:'+hCol+';text-align:center">'+H[i]+'</div>'); 
+document.write('</div></div>'); 
+document.write('<div id="Om" style="position:absolute;top:0px;left:0px"><div style="position:relative">'); 
+for (i=0; i < M.length; i++) 
+document.write('<div id="ieMinutes" style="position:absolute;width:16px;height:16px;font-family:Arial;font-size:16px;color:'+mCol+';text-align:center">'+M[i]+'</div>'); 
+document.write('</div></div>') 
+document.write('<div id="Os" style="position:absolute;top:0px;left:0px"><div style="position:relative">'); 
+for (i=0; i < S.length; i++) 
+document.write('<div id="ieSeconds" style="position:absolute;width:16px;height:16px;font-family:Arial;font-size:16px;color:'+sCol+';text-align:center">'+S[i]+'</div>'); 
+document.write('</div></div>') 
+} 
+(ns)?window.captureEvents(Event.MOUSEMOVE):0; 
+function Mouse(evnt){ 
+ymouse = (ns)?evnt.pageY+ClockFromMouseY-(window.pageYOffset):event.y+ClockFromMouseY; 
+xmouse = (ns)?evnt.pageX+ClockFromMouseX:event.x+ClockFromMouseX; 
+} 
+(ns)?window.onMouseMove=Mouse:document.onmousemove=Mouse; 
+function ClockAndAssign(){ 
+time = new Date (); 
+secs = time.getSeconds(); 
+sec = -1.57 + Math.PI * secs/30; 
+mins = time.getMinutes(); 
+min = -1.57 + Math.PI * mins/30; 
+hr = time.getHours(); 
+hrs = -1.575 + Math.PI * hr/6+Math.PI*parseInt(time.getMinutes())/360; if (ie){ 
+Od.style.top=window.document.body.scrollTop; 
+Of.style.top=window.document.body.scrollTop; 
+Oh.style.top=window.document.body.scrollTop; 
+Om.style.top=window.document.body.scrollTop; 
+Os.style.top=window.document.body.scrollTop; 
+} 
+for (i=0; i < n; i++){ 
+var F=(ns)?document.layers['nsFace'+i]:ieFace[i].style; 
+F.top=y[i] + ClockHeight*Math.sin(-1.0471 + i*Split*Math.PI/180)+scrll; 
+F.left=x[i] + ClockWidth*Math.cos(-1.0471 + i*Split*Math.PI/180); 
+} 
+for (i=0; i < H.length; i++){ 
+var HL=(ns)?document.layers['nsHours'+i]:ieHours[i].style; 
+HL.top=y[i]+HandY+(i*HandHeight)*Math.sin(hrs)+scrll; 
+HL.left=x[i]+HandX+(i*HandWidth)*Math.cos(hrs); 
+} 
+for (i=0; i < M.length; i++){ 
+var ML=(ns)?document.layers['nsMinutes'+i]:ieMinutes[i].style; 
+ML.top=y[i]+HandY+(i*HandHeight)*Math.sin(min)+scrll; 
+ML.left=x[i]+HandX+(i*HandWidth)*Math.cos(min); 
+} 
+for (i=0; i < S.length; i++){ 
+var SL=(ns)?document.layers['nsSeconds'+i]:ieSeconds[i].style; 
+SL.top=y[i]+HandY+(i*HandHeight)*Math.sin(sec)+scrll; 
+SL.left=x[i]+HandX+(i*HandWidth)*Math.cos(sec); 
+} 
+for (i=0; i < D.length; i++){ 
+var DL=(ns)?document.layers['nsDate'+i]:ieDate[i].style; 
+DL.top=Dy[i] + ClockHeight*1.5*Math.sin(currStep+i*Dsplit*Math.PI/180)+scrll; 
+DL.left=Dx[i] + ClockWidth*1.5*Math.cos(currStep+i*Dsplit*Math.PI/180); 
+} 
+currStep-=step; 
+} 
+function Delay(){ 
+scrll=(ns)?window.pageYOffset:0; 
+Dy[0]=Math.round(DY[0]+=((ymouse)-DY[0])*speed); 
+Dx[0]=Math.round(DX[0]+=((xmouse)-DX[0])*speed); 
+for (i=1; i < D.length; i++){ 
+Dy[i]=Math.round(DY[i]+=(Dy[i-1]-DY[i])*speed); 
+Dx[i]=Math.round(DX[i]+=(Dx[i-1]-DX[i])*speed); 
+} 
+y[0]=Math.round(Y[0]+=((ymouse)-Y[0])*speed); 
+x[0]=Math.round(X[0]+=((xmouse)-X[0])*speed); 
+for (i=1; i < n; i++){ 
+y[i]=Math.round(Y[i]+=(y[i-1]-Y[i])*speed); 
+x[i]=Math.round(X[i]+=(x[i-1]-X[i])*speed); 
+} 
+ClockAndAssign(); 
+setTimeout('Delay()',20); 
+} 
+if (ns||ie)window.onload=Delay; 
+</SCRIPT>
+</body>

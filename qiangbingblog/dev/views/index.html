@@ -1,0 +1,240 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:v="urn:schemas-microsoft-com:vml"
+	xmlns:o="urn:schemas-microsoft-com:office:office">
+
+<head>
+<link href="/views/css/skin.css" rel="stylesheet" type="text/css" />
+<meta http-equiv="Content-Language" content="zh-cn" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>qiangbingblog</title>
+<style type="text/css">
+
+<!--
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	background-color: #EEF2FB;
+	background-image: url(news-title-bg.gif);
+	background-repeat: repeat-x;
+}
+
+td{
+	CURSOR: hand;
+	COLOR: #000000;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	line-height: 25px;
+	border: 1px solid #B5D0D9;
+	background-repeat: repeat-x;
+}
+
+</style>
+
+<script type="text/javascript">
+  new Validation("signup_form");
+  $$('.combobox').each(function(el){
+    el.observe('change', function() {
+      var input = $(this).previous('input[type=text]');
+      input.value = $(this).value;
+      Validation.validateElement(input);
+    });
+  });
+
+  // ie6 does has bug with z-index
+  if(navigator.userAgent.indexOf('MSIE') !== -1) {
+    $$('div.from')[0].setStyle("position:static;");
+    $$('select.combobox')[0].setStyle("position:static;width:80px;");
+    $$('input.comboText')[0].setStyle("position:static;height:12px; padding: 4px 5px; border:solid 1px #ccc;");
+    $$('div.from span')[0].setStyle("margin:0;");
+  }
+</script>
+</head>
+
+<body>
+
+<table border="0" align="center" >
+	<div>
+		<a href="login.html">登录</a>|<a href="register.html">注册</a>	</div>
+	<tr>
+		<td width="214"><img
+			src="/views/pictures/UiCan!_Logo.gif" width="200" height="100" /></td>
+		<td width="840"><img
+			src="/views/pictures/blog.jpg" width="728" height="90" border="0" />&nbsp;</td>
+	</tr>
+	<tr>
+		<td colspan="2" height="25" bgcolor="#008080" class="wrapper">
+		<strong>　　　 <a href="/index.html">首页</a>　　|　　<a href="#">论坛</a>　　|　　<a href="#">问答</a>　　 
+								|　　 <a href="#">专栏</a>　　　|　　<a href="#">精华</a>　　|　  　<a href="#">资讯</a>　　  |　　 <a href="#">搜索</a>　　 
+								|　　<a href="#">关于</a>　　　</strong>
+	</td>
+	</tr>
+	<tr>
+		<td colspan="2" valign="top">
+		<table width="96%" height="336" style="width: 100%">
+			<tr>
+				<td width="396" align="center" valign="top" bgcolor="#008080">
+			  24254253253453453453</td>
+				<td width="385" valign="top">
+				<table style="width: 100%">
+					<tr>
+					  <td height="25" bgcolor="#008080"><marquee scrolldelay=300 scrollamout=300><font
+							size="3" color="yellow">日期：{{ now }}</font>
+					  </marquee></td>
+					</tr>
+				</table>
+				<table width="80%" style="width: 100%">
+					<tr>
+						<td width="27" height="254" align="center" style="width: 25px"><br />
+						<span class="style9"><strong>新闻动态</strong></span><br />
+						<br />
+						<br />
+					  <br />					  </td>
+						<td width="340" valign="top" background="/views/pictures/news-title-bg.gif">
+						{% for doc in doc %} 
+						<a href="/info/{{doc.id}}">&nbsp;&nbsp;&nbsp;<img src="/views/pic/list.jpg"></img>{{ doc.title }}</a>
+						{{doc.time}}
+						<br />
+					  {% endfor %}</span></td>
+					</tr>
+			  </table>			  </td>
+				<td width="259" rowspan="2" valign="top">
+				<table>
+					<tr>
+						<td width="20" bgcolor="#008080" style="height: 15px">
+						<form method="get" action="search/">
+						<div><input name="q"
+							value="{{ query|escape }}" type="text" style="width: 210px" /> <input
+							type="submit" value="搜索" /></div>
+					  </form>						</td>
+					</tr>
+					<tr>
+						<td valign="top" style="height: 51px"><img
+							src="/views/pictures/discuzx1_box.jpg" width="290" height="104" /></td>
+					</tr>
+					<tr>
+						<td valign="top" bgcolor="#669999" class="style4"><strong><span
+							class="style7">
+						推荐精华文章</span></strong></td>
+					</tr>
+				</table>
+				1221311311<br />
+				123132<br />
+				131321<br />
+				13132<br />
+				13132<br />
+				fghgfh<br />
+				fhfgh<br />
+				dfgdfgh<br />
+			  fhgfh</td>
+			</tr>
+			<tr>
+				<td height="29" colspan="2" valign="top" >&nbsp;</td>
+			</tr>
+		</table>
+		<table style="width: 100%">
+			<tr valign="middle">
+				<td width="312" height="25" bgcolor="#669999" style="width: 303px">1</td>
+				<td width="354" bgcolor="#669999" style="width: 352px">2</td>
+				<td width="288" bgcolor="#669999" class="style4" style="width: 269px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<span> fhgfhdghdffghfh</span></td>
+			</tr>
+			<tr>
+				<td style="width: 34%" class="style8" valign="top">1<br />
+				2<br />
+				3<br />
+				4<br />
+				5<br />
+				6</td>
+				<td style="width: 35%" valign="top" class="style8">1<br />
+				2<br />
+				3<br />
+				4<br />
+				5<br />
+				6<br />				</td>
+				<td style="width: 30%" valign="top" class="style8">1<br />
+				2<br />
+				3<br />
+				4<br />
+				5<br />
+				6<br />				</td>
+			</tr>
+		</table>
+		<table style="width: 100%">
+			<tr>
+				<td style="width: 70%" bgcolor="#669999" height="25">3</td>
+				<td bgcolor="#669999">4</td>
+			</tr>
+			<tr>
+				<td style="width: 30%" valign="top">1<br />
+				2<br />
+				3<br />
+				4<br />
+				5<br />				</td>
+				<td valign="top" class="style8">1<br />
+				3<br />
+				4<br />
+				5<br />
+				6</td>
+			</tr>
+			<tr>
+              <td style="width: 70%" bgcolor="#669999" height="25">5</td>
+			  <td bgcolor="#669999">6</td>
+		  </tr>
+			<tr>
+              <td style="width: 30%" valign="top">1<br />
+                2<br />
+                3<br />
+                4<br />
+                5<br />              </td>
+			  <td valign="top" class="style8">1<br />
+			    3<br />
+			    4<br />
+			    5<br />
+			    6</td>
+		  </tr>
+		</table>
+		<div><br />
+		<div id="site_nav"
+			style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; z-index: 1; color: rgb(0, 0, 0); font-family: Helvetica, Tahoma, Arial, sans-serif; font-size: 12px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 18px; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px;">
+		<ul
+			style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; width: 950px; line-height: 1em; list-style-type: none; list-style-position: initial; list-style-image: initial;">
+			<li
+				style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 3px; padding-right: 10px; padding-bottom: 3px; padding-left: 10px; display: inline; list-style-type: none; list-style-position: initial; list-style-image: initial; line-height: 1em; border-right-width: 1px; border-right-style: solid; border-right-color: rgb(170, 170, 170);"><a
+				style="color: rgb(0, 102, 153); text-decoration: none;"
+				href="http://www.qiangbing.net/index/service">广告服务</a><span
+				class="Apple-converted-space">&nbsp;</span></li>
+			<li
+				style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 3px; padding-right: 10px; padding-bottom: 3px; padding-left: 10px; display: inline; list-style-type: none; list-style-position: initial; list-style-image: initial; line-height: 1em; border-right-width: 1px; border-right-style: solid; border-right-color: rgb(170, 170, 170);"><a
+				style="color: rgb(0, 102, 153); text-decoration: none;"
+				href="http://webmaster.qiangbing.net/">Qiangbing黑板报</a><span
+				class="Apple-converted-space">&nbsp;</span></li>
+			<li
+				style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 3px; padding-right: 10px; padding-bottom: 3px; padding-left: 10px; display: inline; list-style-type: none; list-style-position: initial; list-style-image: initial; line-height: 1em; border-right-width: 1px; border-right-style: solid; border-right-color: rgb(170, 170, 170);"><a
+				style="color: rgb(0, 102, 153); text-decoration: none;"
+				href="/contact/">联系我们</a><span
+				class="Apple-converted-space">&nbsp;</span></li>
+			<li class="last"
+				style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 3px; padding-right: 10px; padding-bottom: 3px; padding-left: 10px; display: inline; list-style-type: none; list-style-position: initial; list-style-image: initial; line-height: 1em; border-right-width: initial; border-right-style: none; border-right-color: initial;"><a
+				style="color: rgb(0, 102, 153); text-decoration: none;"
+				href="http://www.qiangbing.net/index/friend_links">友情链接</a></li>
+		</ul>
+		</div>
+		<div id="copyright"
+			style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 10px; padding-right: 10px; padding-bottom: 10px; padding-left: 10px; color: rgb(0, 0, 0); font-family: Helvetica, Tahoma, Arial, sans-serif; font-size: 12px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 18px; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px;">
+		© 2003-2012 QiangBing.net. [<span class="Apple-converted-space">&nbsp;</span><a
+			style="color: rgb(0, 102, 153); text-decoration: none;"
+			href="http://www.miibeian.gov.cn/">京ICP证110151号</a><span
+			class="Apple-converted-space">&nbsp;</span>京公网安备110105010620 ]<br />
+		QiangBing.net 版权所有</div>
+		<br />
+		<br />
+		</div>		</td>
+	</tr>
+</table>
+
+</body>
+
+</html>

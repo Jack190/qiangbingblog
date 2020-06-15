@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+
+<style type="text/css">
+<!--
+	.body{font-size:15px; bgcolor:blue}
+
+-->
+</style>
+</head>
+<body>
+{% for sort in sorts.object_list %}
+
+<a href="/info/{{sort.id}}">{{ sort.id }}</a>、<a href="/info/{{sort.id}}">{{ sort.title }}</a>,<a href="/delete/{{sort.id}}" >删除</a>,{{sort.time}}，{{sort.images}}<br/>
+
+{% endfor %}
+
+<div>
+
+<a href="?page=1">首页</a>
+
+
+{% if sorts.has_previous %}
+
+<a href="?page={{ sorts.previous_page_number }}">&lt; 上一页</a>
+
+{% endif %}
+
+<span>
+
+{% for p in page_range %}
+
+{% ifequal p sorts.number %}
+
+<span class="current">{{p}}</span>
+
+{% else %}
+
+<a href="?page={{p}}" title="第{{p}}页">{{p}}</a>
+
+{% endifequal %}
+
+{% endfor %}
+
+</span>
+
+{% if books.has_next %}
+
+<a href="?page={{ sorts.next_page_number }}">下一页 &gt; </a>
+
+{% endif %}
+
+<a >[第{{ sorts.number }}/{{ sorts.paginator.num_pages }}页] </a>
+
+<a href="?page={{ sorts.paginator.num_pages}}">尾页</a>
+
+</div>
+<p><a href="houtai/login.html"> 返回  </a></p>
+{% if sort.images %}<img src='{{ sort.images.url }}' />{% endif %}
+</body>
+</html>

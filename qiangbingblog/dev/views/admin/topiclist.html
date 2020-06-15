@@ -1,0 +1,122 @@
+﻿<link href="/views/admin/images/skin.css" rel="stylesheet" type="text/css" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<head>
+<style>
+<!--
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	background-color: #EEF2FB;
+}
+-->
+</style>
+</head>
+
+<body>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="17" valign="top" background="/views/admin/images/mail_leftbg.gif"><img src="/views/admin/images/left-top-right.gif" width="17" height="29" /></td>
+    <td valign="top" background="/views/admin/images/content-bg.gif"><table width="100%" height="31" border="0" cellpadding="0" cellspacing="0" class="left_topbg" id="table2">
+      <tr>
+        <td height="31"><div class="titlebt">欢迎界面</div></td>
+      </tr>
+    </table></td>
+    <td width="16" valign="top" background="/views/admin/images/mail_rightbg.gif"><img src="/views/admin/images/nav-right-bg.gif" width="16" height="29" /></td>
+  </tr>
+  <tr>
+    <td valign="middle" background="/views/admin/images/mail_leftbg.gif">&nbsp;</td>
+    <td valign="top" bgcolor="#F7F8F9"><table width="98%" border="0" align="center" cellpadding="0" cellspacing="0">
+      <tr>
+        <td colspan="2" valign="top">&nbsp;</td>
+        <td width="7%">&nbsp;</td>
+        <td width="40%" valign="top">&nbsp;</td>
+      </tr>
+      <tr>
+        <td colspan="4" valign="top"><span class="left_bt">栏目列表</span><br>
+		</td>
+     </tr>
+      
+      <tr>
+        <td height="20" colspan="4"><table width="100%" height="1" border="0" cellpadding="0" cellspacing="0" bgcolor="#CCCCCC">
+          <tr>
+            <td></td>
+          </tr>
+        </table></td>
+      </tr>
+      <tr>
+        <td height="40" colspan="4"><table width="100%" height="1" border="0" cellpadding="0" cellspacing="0">
+          <tr>
+            <td>
+            <ul id="ul1" style="float:left">
+				{% for topic in topic.object_list %}
+				  <li>
+ 					<input id="ids" type="checkbox"  value="{{info.id}}" checked="FALSE"/>
+ 					{{topic.bigtopic}} | <a href="modify/{{topic.id}}">修改</a> | <a href="delete/{{topic.id}}" onClick="javascript:return confirm('确认删除？')">删除</a><br>
+				</li>
+				{% endfor %}
+				
+<div>
+
+<a href="?page=1">首页</a>
+
+
+{% if topic.has_previous %}
+
+<a href="?page={{ info.previous_page_number }}">&lt; 上一页</a>
+
+{% endif %}
+
+<span>
+
+{% for p in page_range %}
+
+{% ifequal p topic.number %}
+
+<span class="current">{{p}}</span>
+
+{% else %}
+
+<a href="?page={{p}}" title="第{{p}}页">{{p}}</a>
+
+{% endifequal %}
+
+{% endfor %}
+
+</span>
+
+{% if books.has_next %}
+
+<a href="?page={{ info.next_page_number }}">下一页 &gt; </a>
+
+{% endif %}
+
+<a >[第{{ topic.number }}/{{ topic.paginator.num_pages }}页] </a>
+
+<a href="?page={{ info.paginator.num_pages}}">尾页</a>
+
+</div>
+</ul>
+            
+			</td>
+          </tr>
+        </table></td>
+      </tr>
+      <tr>
+        <td width="2%">&nbsp;</td>
+        <td width="51%" class="left_txt"><img src="/views/admin/images/icon-mail2.gif" width="16" height="11"> 客户服务邮箱：451793556@qq.com<br>
+              <img src="/views/admin/images/icon-phone.gif" width="17" height="14"> 官方网站：http://www.qiangbing.net</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+    </table></td>
+    <td background="/views/admin/images/mail_rightbg.gif">&nbsp;</td>
+  </tr>
+  <tr>
+    <td valign="bottom" background="/views/admin/images/mail_leftbg.gif"><img src="/views/admin/images/buttom_left2.gif" width="17" height="17" /></td>
+    <td background="/views/admin/images/buttom_bgs.gif"><img src="/views/admin/images/buttom_bgs.gif" width="17" height="17"></td>
+    <td valign="bottom" background="/views/admin/images/mail_rightbg.gif"><img src="/views/admin/images/buttom_right2.gif" width="16" height="17" /></td>
+  </tr>
+</table>
+</body>
